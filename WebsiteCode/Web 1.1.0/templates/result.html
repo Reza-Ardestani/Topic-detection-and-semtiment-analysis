@@ -1,0 +1,76 @@
+<!doctype html>
+<!DOCTYPE html>
+<head>
+    <title>Topic based sentiment analysis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='Mystyle.css') }}">
+    <!--<link rel="stylesheet" href="CSS/Mystyle.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(odd) {
+          background-color: #dddddd;
+        }
+        tr:nth-child(even) {
+          color: white;
+        }
+    </style>
+</head>
+<body background="static/background.JPG" class="mybody">
+    <center>
+        <div class="container" id="Myheader">
+               <h1>Topic based sentiment analysis</h1>
+        </div>
+        <div class="container" id="toptext"> <!-- paragraph Top of body -->
+			    <h3>Result of analysis on the given review</h3>
+        </div>
+        <table style="color: white; border = 1px solid white;">
+            {% for key, value in result.items() %}
+
+            <!--<h1>Sentence:  {{ value[0] }}</h1>-->
+            <!--<h1>Sentiment in scale of 1 to 5:  {{ value[1] }}</h1>-->
+            <!--<h1>Dominant topic:  {{ value[2] }}</h1>-->
+
+            <table style="width:100%">
+              <tr>
+                <th>Review</th>
+                <th>Sentiment</th>
+                <th>Dominant topic</th>
+              </tr>
+              <tr>
+                <td>{{ value[0] }}</td>
+                <td>{{ value[1] }}</td>
+                <td>{{ value[2] }}</td>
+              </tr>
+            </table>
+
+            <!--<tr>-->
+               <!--<th> {{ key }} </th>-->
+               <!--<td> {{ value[1] }} </td>-->
+            <!--</tr>-->
+
+            <!--<tr>-->
+               <!--<th> Dominant Topic </th>-->
+               <!--<td> {{ value[2] }} </td>-->
+            <!--</tr>-->
+
+            {% endfor %}
+        </table>
+    </center>
+</body>

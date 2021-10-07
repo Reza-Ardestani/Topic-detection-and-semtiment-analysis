@@ -1,0 +1,26 @@
+div#Myheader { /* id */
+	text-align: center; color: white;
+}
+
+div#toptext{ /* id */
+	text-align: center; color: white;  font-size: 12px; margin-bottom: 45px
+}
+
+button#myfind{ /* id */
+	margin: 5px; background-color: rgba(20, 41, 62, 0.8); color: white;
+}
+button#mymed{ /* id */
+	margin: 5px; background-color: transparent; border-color: white; color: white;
+}
+
+.mybutton{ /* class */
+	background-color: transparent; border-color: white;
+}
+
+.mybody { /* class */
+    margin: 10% 2%;
+}
+
+.myselect{ /* class */
+	"-webkit-border-radius: 0px; border-bottom-right-radius: 5px; border-top-right-radius: 5px; border-color: lightgrey;
+}

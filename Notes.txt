@@ -1,0 +1,3 @@
++ In the "Web 1.1.0" folder, the last collected data from Notebook are in DataLast folder.
+
++++ when we save Colab file graph result of "## LDA evaluation and visualization" part disappear. You should run the code to see the result

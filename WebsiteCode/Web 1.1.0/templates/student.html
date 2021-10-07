@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Topic based sentiment analysis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='Mystyle.css') }}">
+    <!--<link rel="stylesheet" href="CSS/Mystyle.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body background="static/background.JPG" class="mybody">
+    <form action = "http://127.0.0.1:5000/result" method = "POST">
+       <center>
+           <div class="container" id="Myheader">
+               <h1>Topic based sentiment analysis</h1>
+           </div>
+           <div class="container" id="toptext"> <!-- paragraph Top of body -->
+			    <h3>Insert a review from a movie or series</h3>
+           </div>
+           <div class="input-group"> <!-- Place of loading -->
+                <!--<span class="input-group-addon" style="background-color: white; border-bottom-left-radius: 5px; border-top-left-radius: 5px;"></span>-->
+                <input type="text" class="form-control" name="review" placeholder="Review" style="height:40px; width:320px; background-color: white; border-radius: 5px;" onkeypress="this.style.width = ((this.value.length + 40) * 8) + 'px';">
+           </div>
+           <!--<p>review <input type = "text" name = "review" onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';" /></p>-->
+           <p style="padding: 2%;"><input style="height:120%; width:10%; background-color: white; border-radius: 5px;" type = "submit" value = "submit" /></p>
+       </center>
+    </form>
+</body>
